@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-vision"
+version = "0.1.0"
+description = "Experiment with Llama 3.2 using a small Python package."
+dependencies = [
+    "ollama>=0.4,<1.0",
+    "Pillow>=10,<13",
+    "PyMuPDF>=1.24,<2.0",
+]
+
+[project.scripts]
+llm-vision = "llm_vision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
